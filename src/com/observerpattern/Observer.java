@@ -1,6 +1,9 @@
 package com.observerpattern;
 
+import com.observerpattern.News.NewsType;
+
 public interface Observer<T> {
-	public default void onUpdate(T data) {
-	}
+	public void onUpdate(T data);
+	
+	public NewsType getRequiredNewsType();
 }
